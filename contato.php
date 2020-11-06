@@ -65,6 +65,28 @@
 
                 </form>
 
+                <?php
+                      $sql="select * from comentarios";
+                        $result =$conn->query($sql);
+
+                        if($result->num_rows > 0){
+                            while($rows = $result->fetch_assoc()){
+                  
+                                echo "Data: ", $rows['data'],"<br>";
+                                echo "Nome: ", $rows['nome'],"<br>";
+                                echo "Mensagem: ", $rows['msg'],"<br>";
+                                echo "<hr>";
+                    
+                            }   
+                        }else {
+                            echo "Nenhum produto comentario";
+                        }
+                  
+                  ?>
+
+                                           
+                      
+
             </section>    
                
                 <main>
