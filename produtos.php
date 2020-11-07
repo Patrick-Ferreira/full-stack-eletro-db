@@ -17,11 +17,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Produtos - Full Stack Eletro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="./css/estilo.css">
         <script src="js/funcoes.js"></script>
      
     </head>
     <body>
+        <div class="container-fluid">
          <!--Inicio do Menu-->
          
          <?php
@@ -32,57 +38,62 @@
             <h2>Produtos</h2>
             <hr>
         </header>
-        <main>
-       
-                <section class="categorias">
-                    <h3>Categorias</h3>
-                    <ul>
-                        <li onclick="exibir_todos()">Todos (12)</li>
-                        <li onclick="exibir_categoria('geladeira')">Geladeiras (3)</li>
-                        <li onclick="exibir_categoria('fogao')">Fogões (2)</li>
-                        <li onclick="exibir_categoria('microondas')">Microondas (3)</li>
-                        <li onclick="exibir_categoria('lava_roupas')">Lavadora de roupas (2)</li>
-                        <li onclick="exibir_categoria('lava_loucas')">Lava-louças (2)</li>
-                    </ul>
-                </section>
-                <div class="produtos">
-                    <?php
-                      $sql="select * from produtos";
-                        $result =$conn->query($sql);
-
-                        if($result->num_rows > 0){
-                            while($rows = $result->fetch_assoc()){
-                    ?>
-
-                             <div class="box_produtos" id="<?php echo $rows ["categoria"];?>" > 
-                                <img src="<?php echo $rows ["imagem"];?>" width="150px" onclick="destaque(this)">
-                                <br>
-                                <p class="descricao">"<?php echo $rows ["descricao"];?>"</p>
-                                <hr>
-                                <p class="descricao"><strike>R$ <?php echo $rows ["preco"];?></strike></p>
-                                <p class="preco">R$ <?php echo $rows ["preco_venda"];?></p><br>
-                            </div>
-                            
-                
-                        <?php 
-                            }   
-                        }else {
-                            echo "Nenhum produto cadastrado";
-                        }
+    
+                <div class="container-fluid row">
+                <!--   <div class="row">
+                    <div class="col-2 bg-success ">   -->
+                    <section class="categorias col-3">
+                        <h3>Categorias</h3>
+                        <ul>
+                            <li onclick="exibir_todos()">Todos (12)</li>
+                            <li onclick="exibir_categoria('geladeira')">Geladeiras (3)</li>
+                            <li onclick="exibir_categoria('fogao')">Fogões (2)</li>
+                            <li onclick="exibir_categoria('microondas')">Microondas (3)</li>
+                            <li onclick="exibir_categoria('lava_roupas')">Lavadora de roupas (2)</li>
+                            <li onclick="exibir_categoria('lava_loucas')">Lava-louças (2)</li>
+                        </ul>
+                    </section>
+               
                         
-                        ?>
-                                 
-                  </div>
+                     <section class="produtos col-9">
+                         <div class="row">
+                                    <?php
+                                    $sql="select * from produtos";
+                                        $result =$conn->query($sql);
 
-    </main>
+                                        if($result->num_rows > 0){
+                                            while($rows = $result->fetch_assoc()){
+                                    ?>
+
+                                            <div class="box_produtos col-3 " id="<?php echo $rows ["categoria"];?>"> 
+                                                <img src="<?php echo $rows ["imagem"];?>" width="150px" onclick="destaque(this)">
+                                                <br>
+                                                <p class="descricao">"<?php echo $rows ["descricao"];?>"</p>
+                                                <hr>
+                                                <p class="descricao"><strike>R$ <?php echo $rows ["preco"];?></strike></p>
+                                                <p class="preco">R$ <?php echo $rows ["preco_venda"];?></p><br>
+                                            </div>
+                                                        
+                                        <?php 
+                                            }   
+                                        }else {
+                                            echo "Nenhum produto cadastrado";
+                                        }
+                                        ?>
+                         </div>
+                                 
+                                   
+                   </section>
+                </div>
+          
     
 
-        <footer id="rodape">
-            <p id="formas_pagamentos">Formas de Pagamentos</p>
-            <img width="400px" src="./imagens/Formas de Pagamento.jpeg" alt="Formas de Pagamentos"> 
-            <p class="Recode">&copy;Recode Pro</p>
-        </footer>
-        
+                <footer id="rodape">
+                    <p id="formas_pagamentos">Formas de Pagamentos</p>
+                    <img width="400px" src="./imagens/Formas de Pagamento.jpeg" alt="Formas de Pagamentos"> 
+                    <p class="Recode">&copy;Recode Pro</p>
+                </footer>
+        </div>
     </body>
 
 </html>

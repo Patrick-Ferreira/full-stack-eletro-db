@@ -1,79 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
   body {
-    
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
   }
-
-  main{
-      margin: 5px;
+  
+  .menu {
+    background-color: #ff0000;
+    padding: 10px;
   }
-
-  #home{
-    height: 495px;
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
   }
-
-  h2{
-      margin: 6px;
+  
+  .categorias {
+    display: inline-block;
+    vertical-align: top;
+    padding: 18px;
   }
-
- #formas_pagamentos{
-     color: red;
-     font-weight: bold;
-     
+  
+  .produtos {
+    display: inline-block;
+    text-align: center;
   }
+  
+  .box-produto {
+    width: 23%;
+    vertical-align: bottom;
+    font-size: 12px;
+    text-align: center;
+    padding: 28
+  
+  }
+  
+  
+  
+  
 
- .Recode{
-        font-size: 13px;        
+ 
 
- }
-
-.menu{
-    background-color: red;   
-    
-}
-
- .menu a{
-     color: white;
-     
-     margin-right:250px;
-     margin-left: 30px;
-     
-    vertical-align:middle;
-    
-     text-align: left;
-   
-     text-decoration: none
-    
-    }
-
-    #rodape{
-        
-        text-align: center;
-        
-    }
-
-    .categorias{
-        
-        display: inline-block;
-        width:20% ;
-        vertical-align: top;
-    }
-    
-    .produtos{
-       
-        display: inline-block;
-        position: relative;
-        width: 79%; 
-    }
-
-    .box_produtos{
-        
-        text-align: center;
-        display: inline-block;
-        width:23% ;
-        margin: 3px;
-        
-    }
 
     .preco{
         color: red;
@@ -84,21 +55,18 @@
         display: inline-block;
         font-size: 25px;      
         padding-left: 10px;
-        padding-right: 290px;
-        margin-left: 160px;
+        padding-right: 100px;
+        margin-left: 200px;
           
     }
 
     .contatos p{    
         align-items: center;
         margin-left: 40px;
-        height: 415px;
+        height: 225px;
     }
 
-   
-   .img{
-       float: left;
-   }
+  
 
    .lojas{
        display: inline-block;
@@ -108,3 +76,17 @@
        padding-right: 270px;
        height: 445px;
    }
+
+
+   #rodape {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #rodape img {
+    width: 420px;
+  }
+  
+  #formas_pagamento {
+    color: red;
+  }

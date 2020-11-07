@@ -7,27 +7,28 @@
         
     </head>
     <body>
-         <!--Inicio do Menu-->
-         <?php
-            include('menu.html')
-         ?>
-        <!--Fim do Menu-->
-       <main id="home">
+         <div class="container-fluid">
+                <!--Inicio do Menu-->
+                <?php
+                    include('menu.html')
+                ?>
+                <!--Fim do Menu-->
+               <main id="home">
 
-           <h1>Seja Bem Vindo(a) !</h1>
-           <p>Aqui em nossa loja, programadores tem desconto em produtos para sua casa!</p>
-        
-        </main>   
+                <h1>Seja Bem Vindo(a) !</h1>
+                <p>Aqui em nossa loja, programadores tem desconto em produtos para sua casa!</p>
+                
+                </main>   
 
-           
-        
+                
+                
 
-        <footer id="rodape">
-            <p id="formas_pagamentos">Formas de Pagamentos</p>
-            <img width="400px" src="./imagens/Formas de Pagamento.jpeg" alt="Formas de Pagamentos"> 
-            <p class="Recode">&copy;Recode Pro</p>
-        </footer>
-     
+                <footer id="rodape">
+                    <p id="formas_pagamentos">Formas de Pagamentos</p>
+                    <img width="400px" src="./imagens/Formas de Pagamento.jpeg" alt="Formas de Pagamentos"> 
+                    <p class="Recode">&copy;Recode Pro</p>
+                </footer>
+        </div>
     </body>
 
 </html>

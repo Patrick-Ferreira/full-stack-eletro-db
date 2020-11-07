@@ -7,6 +7,7 @@
         
     </head>
     <body>
+        <div class="container-fluid">
            <!--Inicio do Menu-->
            <?php
             include('menu.html')
@@ -17,7 +18,7 @@
         <hr>
         </header> 
         
-            <main>
+            <main=>
                 
                 <div class="lojas">
                     <h3>Rio de Janeiro</h3>
@@ -51,6 +52,6 @@
             <img width="400px" src="./imagens/Formas de Pagamento.jpeg" alt="Formas de Pagamentos"> 
             <p class="Recode">&copy;Recode Pro</p>
         </footer>
-         
+        </div>  
     </body>
 </html>
